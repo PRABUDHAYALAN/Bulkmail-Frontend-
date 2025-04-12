@@ -40,7 +40,7 @@ function App() {
     setStatus(true);
 
     axios
-      .post("http://localhost:5000/sendmail", {
+      .post("https://bulkmail-backend-zk30.onrender.com/sendmail", {
         msg: msg,
         emailList: emailList,
       })
