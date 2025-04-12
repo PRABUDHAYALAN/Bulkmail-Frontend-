@@ -63,37 +63,53 @@ function App() {
 
   return (
     <div>
-      <div className="bg-blue-950 text-white text-center">
-        <h1 className="text-2xl font-medium px-5 py-3">BulkMail</h1>
-      </div>
-
-      <div className="bg-blue-800 text-white text-center">
-        <h1 className="font-medium px-5 py-3">We can help your business with sending multiple emails at once</h1>
-      </div>
-
-      <div className="bg-blue-600 text-white text-center">
-        <h1 className="font-medium px-5 py-3">Drag and Drop</h1>
-      </div>
-
-      <div className="bg-blue-400 flex flex-col item-center text-center text-black px-80 py-5">
-        <textarea
-          onChange={handleMsg}
-          value={msg}
-          className="w-[100%] h-32 py-2 outline-none px-2 border border-black rounded-md"
-          placeholder="Enter your email ..."
-        ></textarea>
-
-        <div>
-          <input type="file" onChange={handleFile} className="border-4 border-dashed py-4 px-4 mt-5 mb-5" />
-        </div>
-
-        <p>Total Emails in the file: {emailList.length}</p>
-
-        <button onClick={send} className="ml-80 mt-3 bg-blue-950 py-2 px-2 items-center text-white font-medium rounded-md w-fit">
-          {status ? "Sending..." : "Send"}
-        </button>
-      </div>
+    <div className="bg-blue-950 text-white text-center">
+      <h1 className="text-2xl font-medium px-5 py-3">BulkMail</h1>
     </div>
+  
+    <div className="bg-blue-800 text-white text-center">
+      <h1 className="font-medium px-5 py-3">
+        We can help your business with sending multiple emails at once
+      </h1>
+    </div>
+  
+    <div className="bg-blue-600 text-white text-center">
+      <h1 className="font-medium px-5 py-3">Drag and Drop</h1>
+    </div>
+  
+    <div className="bg-blue-400 flex flex-col items-center text-center text-black px-4 sm:px-10 md:px-20 lg:px-40 xl:px-80 py-5">
+      <textarea
+        onChange={handleMsg}
+        value={msg}
+        className="w-full h-32 py-2 outline-none px-2 border border-black rounded-md"
+        placeholder="Enter your email ..."
+      ></textarea>
+  
+      <div className="w-full">
+        <input
+          type="file"
+          onChange={handleFile}
+          className="w-full border-4 border-dashed py-4 px-4 mt-5 mb-5"
+        />
+      </div>
+  
+      <p className="text-sm sm:text-base mb-2">Total Emails in the file: {emailList.length}</p>
+  
+      <button
+        onClick={send}
+        className="mt-3 bg-blue-950 py-2 px-6 text-white font-medium rounded-md"
+      >
+        {status ? "Sending..." : "Send"}
+      </button>
+    </div>
+    <div className="bg-blue-300 text-white text-center p-8">
+   
+  </div>
+  <div className="bg-blue-200 text-white text-center p-8">
+  
+</div>
+  </div>
+  
   );
 }
 
